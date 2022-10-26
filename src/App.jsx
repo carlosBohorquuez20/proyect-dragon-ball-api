@@ -7,7 +7,7 @@ function App() {
 
   const [character, setCharacter] = useState({});
 
-  const indexRandom  = (Math.floor(Math.random() * 128));
+  const indexRandom = (Math.floor(Math.random() * 128));
   useEffect(() => {
     axios
       .get("https://dragon-ball-super-api.herokuapp.com/api/characters")
@@ -15,13 +15,13 @@ function App() {
   }, []);
 
   const nextButton = (() => {
-    
-    const indexRandom  = (Math.floor(Math.random() * 128));
-    axios
-    .get("https://dragon-ball-super-api.herokuapp.com/api/characters")
-    .then((res) => setCharacter(res.data[indexRandom]))
 
-    
+    const indexRandom = (Math.floor(Math.random() * 128));
+    axios
+      .get("https://dragon-ball-super-api.herokuapp.com/api/characters")
+      .then((res) => setCharacter(res.data[indexRandom]))
+
+
   })
 
   console.log(character);
@@ -29,9 +29,15 @@ function App() {
     <div className="App">
       <div className="card-box">
         <div className='name-character'>
-          <span className='icon-right'><img className='img-icon' src="https://www.seekpng.com/png/full/127-1271955_anime-icon-goku-dragon-ball-z-symbol.png" alt="" /></span><h2>{character.name}</h2><span className='icon-left'><img className='img-icon' src="https://www.seekpng.com/png/full/127-1271955_anime-icon-goku-dragon-ball-z-symbol.png" alt="" /></span>
+          <div className='icon-right'>
+            <img className='img-icon' src="https://www.seekpng.com/png/full/127-1271955_anime-icon-goku-dragon-ball-z-symbol.png" alt="" />
+          </div>
+          <h2>{character.name}</h2>
+          <div className='icon-left'>
+            <img className='img-icon' src="https://www.seekpng.com/png/full/127-1271955_anime-icon-goku-dragon-ball-z-symbol.png" alt="" />
+          </div>
         </div>
-        <div className='character-contet'>
+        <div className='character-content'>
           <div className='left-content'>
             <img className='character-img' src={character.imageUrl} alt="" />
           </div>
@@ -50,7 +56,7 @@ function App() {
               <div className='btn-next'>
                 <button className='btn' onClick={nextButton}><i className="fa-solid fa-circle-arrow-right icon-next"></i></button>
               </div>
-              
+
             </div>
           </div>
         </div>

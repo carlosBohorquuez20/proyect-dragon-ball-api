@@ -1,4 +1,4 @@
-body{
+body {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -11,8 +11,8 @@ body{
   background-image: url("https://cdn.hswstatic.com/gif/play/a551c105-7d4c-4a94-b3e3-fd3cba872b3c-1920-1080.jpg");
 }
 
-.card-box{
-  width: 800px;
+.card-box {
+  width: 100%;
   height: auto;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -20,41 +20,43 @@ body{
   align-items: center;
   border-radius: 20px;
   border: 1px solid white;
-  overflow-y: hidden ;
+  overflow-y: hidden;
 }
 
-.name-character{
+.name-character {
   width: 100%;
+  height: 100%;
   padding: 0;
   display: flex;
   gap: 30px;
   justify-content: center;
-  font-size: 30px;
+  align-items: center;
+  font-size: 100%;
   border-bottom: 1px solid white;
 }
 
 
-.img-icon{
- width: 120px;
- height: 120px;
- margin-top: 20px;
- display: flex;
- justify-content: center;
- align-items: center;
+.img-icon {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.icon-right{
-  width: 100%;
+.icon-right {
+  width: 33.3%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-right: 1px solid white;
-  margin-bottom: 10px;
 }
 
-.icon-left{
-  width: 100%;
+.icon-left {
+  width: 33.3%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -62,45 +64,47 @@ body{
   border-left: 1px solid white;
 }
 
-.character-contet{
+.character-content {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.left-content{
+.left-content {
   width: 100%;
   height: 100%;
-  overflow-x: hidden ;
-  overflow-y: hidden ;
+  overflow-x: hidden;
+  overflow-y: hidden;
   border-right: 1PX solid white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.character-img{
+.character-img {
   width: 500px;
   height: 450px;
-  overflow-x: hidden ;
-  overflow-y: hidden ;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-.right-content{
+.right-content {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   font-size: 20px;
 }
-.content-detail{
+
+.content-detail {
   width: 100%;
   display: flex;
   flex-direction: column;
-  
+
 }
-.title-details{
+
+.title-details {
   width: 100%;
   font-size: 30px;
   display: flex;
@@ -108,13 +112,13 @@ body{
   border-bottom: 1px solid white;
 }
 
-.details{
+.details {
   padding-left: 20px;
   font-size: 30px;
   border-bottom: 1px solid white;
 }
 
-.btn-next{
+.btn-next {
   width: 100%;
   height: auto;
   display: flex;
@@ -122,7 +126,7 @@ body{
   align-items: flex-end;
 }
 
-.btn{
+.btn {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 20px;
@@ -130,13 +134,12 @@ body{
   cursor: pointer;
 }
 
-.icon-next{
+.icon-next {
   color: orange;
   font-size: 30px;
 }
 
-.icon-next:hover{
+.icon-next:hover {
   color: orangered;
   font-size: 30px;
 }
-
